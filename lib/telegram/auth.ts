@@ -1,6 +1,6 @@
 import { randomBytes } from "crypto";
 
-export const telegramBotUsername = process.env.TELEGRAM_BOT_USERNAME || "qltrade_bot";
+export const telegramBotUsername = (process.env.TELEGRAM_BOT_USERNAME || "qltrade_bot").replace(/^@+/, "");
 
 export type TelegramLoginSession = {
   token: string;
