@@ -65,7 +65,7 @@ export function AuthCard({ mode }: AuthCardProps) {
       }
 
       setStatus("success");
-      setMessage("Check your email to confirm your account, then return to Vionix.");
+      setMessage("Check your email to confirm your account, then return to QL Trade.");
       return;
     }
 
@@ -93,20 +93,20 @@ export function AuthCard({ mode }: AuthCardProps) {
               <ShieldCheck size={22} aria-hidden="true" />
             </div>
             <div>
-              <p className="text-lg font-semibold leading-none">Vionix</p>
-              <p className="mt-1 text-sm text-stone-300">AI governance platform</p>
+              <p className="text-lg font-semibold leading-none">QL Trade</p>
+              <p className="mt-1 text-sm text-stone-300">Automation trade bot</p>
             </div>
           </div>
 
           <div className="mt-10 max-w-sm">
             <p className="text-sm font-medium text-teal-200">
-              {isSignup ? "Create organization account" : "Secure workspace access"}
+              {isSignup ? "Create trading account" : "Secure bot access"}
             </p>
             <h1 className="mt-3 text-3xl font-semibold tracking-normal">
-              {isSignup ? "Start governing AI usage across your organization." : "Sign in to your governance workspace."}
+              {isSignup ? "Create access for your trading automation workspace." : "Sign in to your trading automation dashboard."}
             </h1>
             <p className="mt-4 text-sm leading-6 text-stone-300">
-              Centralize AI policies, approvals, user access, and audit evidence behind role-based access.
+              Manage QL Trade access, Telegram approvals, and automation permissions from one secure login.
             </p>
           </div>
         </section>
@@ -116,7 +116,7 @@ export function AuthCard({ mode }: AuthCardProps) {
             <div>
               <h2 className="text-2xl font-semibold">{isSignup ? "Create account" : "Log in"}</h2>
               <p className="mt-2 text-sm text-stone-500">
-                {isSignup ? "The first user becomes the organization Admin." : "Use your organization email and password."}
+                {isSignup ? "The first user becomes the account Admin." : "Use your email and password."}
               </p>
             </div>
 
@@ -182,14 +182,14 @@ export function AuthCard({ mode }: AuthCardProps) {
                 disabled={status === "loading"}
                 type="submit"
               >
-                {status === "loading" ? "Working..." : isSignup ? "Create organization" : "Log in"}
+                {status === "loading" ? "Working..." : isSignup ? "Create account" : "Log in"}
               </button>
             </form>
 
             <p className="mt-6 text-center text-sm text-stone-500">
-              {isSignup ? "Already have an account?" : "New to Vionix?"}{" "}
+              {isSignup ? "Already have an account?" : "New to QL Trade?"}{" "}
               <Link className="font-semibold text-signal hover:text-ink" href={isSignup ? "/login" : "/signup"}>
-                {isSignup ? "Log in" : "Create an organization"}
+                {isSignup ? "Log in" : "Create an account"}
               </Link>
             </p>
 

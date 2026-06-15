@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Vionix | Enterprise AI Risk Management",
-  description: "Visibility, accountability, and risk management for enterprise AI usage."
+  title: "QL Trade | Automation Trade Bot",
+  description: "Telegram-gated access for the QL Trade automation trading bot."
 };
 
 export default function RootLayout({

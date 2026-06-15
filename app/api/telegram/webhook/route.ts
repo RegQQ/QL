@@ -83,7 +83,7 @@ export async function POST(request: Request) {
 
   if (!loginSession || new Date(loginSession.expires_at).getTime() < Date.now()) {
     if (chatId) {
-      await sendTelegramMessage(chatId, "This Vionix login QR has expired. Please request a new code from the login page.");
+      await sendTelegramMessage(chatId, "This QL Trade login QR has expired. Please request a new code from the login page.");
     }
 
     return NextResponse.json({ ok: true, expired: true });
@@ -125,7 +125,7 @@ export async function POST(request: Request) {
   }
 
   if (chatId) {
-    await sendTelegramMessage(chatId, "You are approved for Vionix. Return to the browser to continue.");
+    await sendTelegramMessage(chatId, "You are approved for QL Trade. Return to the browser to continue.");
   }
 
   return NextResponse.json({ ok: true, allowed: true });

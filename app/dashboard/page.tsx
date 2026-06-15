@@ -77,7 +77,7 @@ export default function DashboardPage() {
     return (
       <main className="grid min-h-screen place-items-center px-4">
         <div className="rounded-lg border border-stone-200 bg-white p-6 text-sm text-stone-500 shadow-panel">
-          Loading your Vionix workspace...
+          Loading your QL Trade workspace...
         </div>
       </main>
     );
@@ -105,7 +105,7 @@ export default function DashboardPage() {
               <ShieldCheck size={22} aria-hidden="true" />
             </div>
             <div>
-              <p className="text-lg font-semibold leading-none">Vionix</p>
+              <p className="text-lg font-semibold leading-none">QL Trade</p>
               <p className="mt-1 text-sm text-stone-500">Organization workspace</p>
             </div>
           </div>
@@ -127,7 +127,7 @@ export default function DashboardPage() {
 
         <section className="mt-4 rounded-lg border border-stone-200 bg-white p-5 shadow-panel">
           <p className="text-sm font-semibold text-signal">Authenticated MVP shell</p>
-          <h1 className="mt-2 text-2xl font-semibold tracking-normal">AI governance workspace</h1>
+          <h1 className="mt-2 text-2xl font-semibold tracking-normal">Trading automation workspace</h1>
           <p className="mt-2 max-w-2xl text-sm leading-6 text-stone-600">
             Authentication, organization accounts, and Admin/Employee roles are ready. The next product modules can now sit behind this workspace boundary.
           </p>

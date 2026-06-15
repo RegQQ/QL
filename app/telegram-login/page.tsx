@@ -114,8 +114,8 @@ export default function TelegramLoginPage() {
               <ShieldCheck size={22} aria-hidden="true" />
             </span>
             <span>
-              <span className="block text-lg font-semibold leading-none">Vionix</span>
-              <span className="mt-1 block text-xs text-white/55">Telegram access</span>
+              <span className="block text-lg font-semibold leading-none">QL Trade</span>
+              <span className="mt-1 block text-xs text-white/55">Automation bot access</span>
             </span>
           </Link>
 
@@ -140,7 +140,7 @@ export default function TelegramLoginPage() {
             </h1>
 
             <p className="mt-6 max-w-2xl text-base leading-7 text-white/64 sm:text-lg">
-              Scan the QR code, open Telegram, and press Start. Vionix confirms the Telegram account and adds it to the allowed-user list automatically.
+              Scan the QR code, open Telegram, and press Start. QL Trade confirms the Telegram account and adds it to the allowed-user list automatically.
             </p>
 
             <div className="mt-9 grid max-w-xl gap-3 sm:grid-cols-3">
@@ -242,7 +242,7 @@ export default function TelegramLoginPage() {
         </section>
 
         <footer className="flex flex-col gap-3 border-t border-white/10 py-5 text-xs text-white/38 sm:flex-row sm:items-center sm:justify-between">
-          <span>Secure Telegram verification for Vionix services</span>
+          <span>Secure Telegram verification for QL Trade services</span>
           <span>QR sessions expire automatically</span>
         </footer>
       </div>

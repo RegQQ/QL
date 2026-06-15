@@ -61,7 +61,7 @@ function CallbackShell({ message }: { message: string }) {
         <div className="mx-auto grid size-11 place-items-center rounded-md bg-ink text-white">
           <ShieldCheck size={22} aria-hidden="true" />
         </div>
-        <h1 className="mt-4 text-xl font-semibold">Vionix authentication</h1>
+        <h1 className="mt-4 text-xl font-semibold">QL Trade authentication</h1>
         <p className="mt-2 text-sm text-stone-500">{message}</p>
       </div>
     </main>
