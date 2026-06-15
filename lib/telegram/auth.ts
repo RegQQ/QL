@@ -9,9 +9,9 @@ export type TelegramLoginSession = {
 };
 
 export function createTelegramLoginSession(): TelegramLoginSession {
-  const token = randomBytes(12).toString("base64url");
+  const token = randomBytes(8).toString("base64url");
   const botUrl = `https://t.me/${telegramBotUsername}?start=${encodeURIComponent(token)}`;
-  const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=420x420&margin=18&data=${encodeURIComponent(botUrl)}`;
+  const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=640x640&format=png&ecc=L&color=000000&bgcolor=FFFFFF&qzone=4&data=${encodeURIComponent(botUrl)}`;
 
   return {
     token,

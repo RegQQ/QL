@@ -30,6 +30,10 @@ function getStartToken(text: string | undefined) {
   return match?.[1]?.trim() || null;
 }
 
+function isStartCommand(text: string | undefined) {
+  return /^\/start(?:@\w+)?(?:\s|$)/.test(text?.trim() ?? "");
+}
+
 async function sendTelegramMessage(chatId: number, text: string) {
   const botToken = process.env.TELEGRAM_BOT_TOKEN;
 
@@ -66,7 +70,18 @@ export async function POST(request: Request) {
   const chatId = update.message?.chat?.id;
   const token = getStartToken(update.message?.text);
 
-  if (!from || from.is_bot || !token) {
+  if (!from || from.is_bot) {
+    return NextResponse.json({ ok: true, ignored: true });
+  }
+
+  if (!token) {
+    if (chatId && isStartCommand(update.message?.text)) {
+      await sendTelegramMessage(
+        chatId,
+        "Open the QL Trade login page, generate a fresh QR code, then open this bot from that QR or the Open Telegram button."
+      );
+    }
+
     return NextResponse.json({ ok: true, ignored: true });
   }
 
