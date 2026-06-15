@@ -1,4 +1,4 @@
-import { randomBytes, randomUUID } from "crypto";
+import { randomBytes } from "crypto";
 
 export const telegramBotUsername = process.env.TELEGRAM_BOT_USERNAME || "qltrade_bot";
 
@@ -9,9 +9,9 @@ export type TelegramLoginSession = {
 };
 
 export function createTelegramLoginSession(): TelegramLoginSession {
-  const token = `${randomUUID()}-${randomBytes(8).toString("hex")}`;
+  const token = randomBytes(12).toString("base64url");
   const botUrl = `https://t.me/${telegramBotUsername}?start=${encodeURIComponent(token)}`;
-  const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=280x280&margin=12&data=${encodeURIComponent(botUrl)}`;
+  const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=420x420&margin=18&data=${encodeURIComponent(botUrl)}`;
 
   return {
     token,

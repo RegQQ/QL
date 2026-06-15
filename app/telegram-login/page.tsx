@@ -165,18 +165,18 @@ export default function TelegramLoginPage() {
                 </span>
               </div>
 
-              <div className="mt-6 rounded-lg border border-white/10 bg-white p-3">
+              <div className="mt-6 rounded-lg border border-white/10 bg-white p-4">
                 <div className="grid aspect-square place-items-center rounded-md bg-white">
                   {loading ? (
                     <Loader2 className="animate-spin text-[#6d5dfc]" size={34} aria-hidden="true" />
                   ) : session ? (
                     <Image
                       alt="Telegram login QR code for @qltrade_bot"
-                      className="size-full max-h-[310px] max-w-[310px]"
-                      height={310}
+                      className="size-full max-h-[360px] max-w-[360px]"
+                      height={360}
                       src={session.qrCodeUrl}
                       unoptimized
-                      width={310}
+                      width={360}
                     />
                   ) : (
                     <p className="px-4 text-center text-sm text-stone-500">QR code unavailable.</p>
