@@ -1,0 +1,80 @@
+{
+  "symbol": "AAPL",
+  "strategy": "backtest 01",
+  "period": "2016-02-22 to 2026-06-10",
+  "assumptions": [
+    "Yahoo adjusted OHLC used; dividends/splits adjusted",
+    "Fundamental quality and analyst revision filters unavailable in this local test, so technical/risk rules were tested only",
+    "Single-name test invests 60% NAV when signal is active",
+    "Transaction cost 0.10% + slippage 0.05% per side"
+  ],
+  "final_nav": 2.217968294503028,
+  "total_return_pct": 121.79682945030281,
+  "annualized_return_pct": 8.043214503404283,
+  "sharpe": 1.1793213444767943,
+  "max_drawdown_pct": -9.548564104132208,
+  "win_rate_pct": 55.00000000000001,
+  "profit_factor": 5.6977331584582,
+  "num_trades": 20,
+  "avg_holding_weeks": 7.878571428571429,
+  "annual_turnover_pct": 233.07630949215635,
+  "last_price": 291.5799865722656,
+  "open_position_before_forced_close": true,
+  "recent_trades": [
+    {
+      "entry_date": "2023-11-27",
+      "entry_price": 188.0759668948836,
+      "signal_week": "2023-11-24",
+      "stop": 172.65600391500092,
+      "exit_date": "2024-01-16",
+      "exit_price": 179.85097721305723,
+      "return": -0.04373227381265221,
+      "hold_weeks": 7.142857142857143,
+      "exit_reason": "MACD bear cross"
+    },
+    {
+      "entry_date": "2024-05-13",
+      "entry_price": 184.1232102876774,
+      "signal_week": "2024-05-10",
+      "stop": 168.0664349619927,
+      "exit_date": "2024-07-15",
+      "exit_price": 234.0974279792697,
+      "return": 0.27141726245980435,
+      "hold_weeks": 9.0,
+      "exit_reason": "RSI>75"
+    },
+    {
+      "entry_date": "2024-08-05",
+      "entry_price": 197.67626732667313,
+      "signal_week": "2024-08-02",
+      "stop": 177.4037939840961,
+      "exit_date": "2024-09-30",
+      "exit_price": 227.98588215310545,
+      "return": 0.15332955865836784,
+      "hold_weeks": 8.0,
+      "exit_reason": "MACD bear cross"
+    },
+    {
+      "entry_date": "2025-08-11",
+      "entry_price": 227.61794172190787,
+      "signal_week": "2025-08-08",
+      "stop": 201.257472215379,
+      "exit_date": "2026-01-05",
+      "exit_price": 269.7329032483679,
+      "return": 0.18502478850245452,
+      "hold_weeks": 21.0,
+      "exit_reason": "MACD bear cross"
+    },
+    {
+      "entry_date": "2026-05-04",
+      "entry_price": 279.8216807216221,
+      "signal_week": "2026-05-01",
+      "stop": 253.50034103045516,
+      "exit_date": "2026-06-10",
+      "exit_price": 291.14261659240725,
+      "return": 0.04045767948212586,
+      "hold_weeks": 5.285714285714286,
+      "exit_reason": "End of test / mark-to-market close"
+    }
+  ]
+}
