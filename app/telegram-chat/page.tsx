@@ -21,6 +21,10 @@ type ChatMessage = {
   text: string;
 };
 
+function cleanAssistantText(text: string) {
+  return text.replace(/^\s*(?:\d+\s+){1,4}(?=[A-Za-z])/u, "").trim();
+}
+
 function AgentStatusBadge({ elapsedSeconds, sending }: { elapsedSeconds: number; sending: boolean }) {
   if (sending) {
     return (
@@ -215,7 +219,7 @@ function TelegramChatContent() {
         {
           id: `assistant-${Date.now()}`,
           role: "assistant",
-          text: payload.reply || "Message received."
+          text: cleanAssistantText(payload.reply || "Message received.")
         }
       ]);
     } catch (chatError) {
@@ -369,7 +373,7 @@ function TelegramChatContent() {
                             : "border border-white/10 bg-white/[0.06] text-white/78"
                         }`}
                       >
-                        {message.text}
+                        {message.role === "assistant" ? cleanAssistantText(message.text) : message.text}
                       </div>
                     </div>
                   ))}
